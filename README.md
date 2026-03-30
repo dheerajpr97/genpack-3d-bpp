@@ -8,6 +8,27 @@ The method combines:
 2. Genetic optimization for residual items
 3. Optional post-compaction and validation
 
+## Method Overview
+
+### GENPACK Architecture
+
+The pipeline follows a staged optimization strategy:
+
+- MAXRECTS-based constructive phase generates feasible layers
+- KPI-guided genetic optimization improves residual placement
+- optional post-compaction refines packing quality
+
+![Architectural overview of the GENPACK pipeline](images/Architectural-block.jpg)
+
+---
+
+### Packing Comparison
+
+The optimization stages improve packing density and structure relative to the initial constructive solution.
+
+![Comparison of packing outcomes produced by GENPACK](images/comparison.png)
+
+
 ## Repository Scope
 
 This repository provides:
@@ -22,9 +43,9 @@ The bundled sample files are sufficient to verify installation and reproduce a f
 
 ---
 
-## Reproducibility / Artifact Notes
+## Reproducibility
 
-This repository serves as the **public artifact accompanying the GECCO Companion 2026 paper**.
+This repository contains the public artifact for the GECCO Companion 2026 paper.
 
 Included:
 
@@ -79,11 +100,7 @@ python -m src.main --ordered-products-path data/1.csv --visualize-bins
 Run with VTK rendering:
 
 ```bash
-python -m src.main \
-  --ordered-products-path data/1.csv \
-  --visualize-bins \
-  --use-vtk \
-  --vtk-resolution 1600x1200
+python -m src.main --ordered-products-path data/1.csv --visualize-bins --use-vtk --vtk-resolution 1600x1200
 ```
 
 ---
@@ -128,28 +145,6 @@ The JSON output preserves item identity and includes `order_id` when available.
 
 ---
 
-## Method Overview
-
-### GENPACK Architecture
-
-The pipeline follows a staged optimization strategy:
-
-- MAXRECTS-based constructive phase generates feasible layers
-- KPI-guided genetic optimization improves residual placement
-- optional post-compaction refines packing quality
-
-![Architectural overview of the GENPACK pipeline](images/Architectural-block.jpg)
-
----
-
-### Packing Comparison
-
-The optimization stages improve packing density and structure relative to the initial constructive solution.
-
-![Comparison of packing outcomes produced by GENPACK](images/comparison.png)
-
----
-
 ## Project Layout
 
 ```text
@@ -158,7 +153,7 @@ genpack-3d-bpp/
 |   |-- main.py
 |   |-- config.py
 |   |-- models/
-|   `-- utils/
+|   |-- utils/
 |-- data/
 |-- images/
 |-- requirements.txt
