@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated arXiv paper and this software artifact."
+title: "GENPACK: KPI-Guided Multi-Objective Genetic Algorithm for Industrial 3D Bin Packing"
+type: software
+version: "1.0.0"
+date-released: 2026-03-24
+license: MIT
+authors:
+  - family-names: Poolavaram
+    given-names: Dheeraj
+  - family-names: Markgraf
+    given-names: Carsten
+  - family-names: Dorn
+    given-names: Sebastian
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Poolavaram
+      given-names: Dheeraj
+    - family-names: Markgraf
+      given-names: Carsten
+    - family-names: Dorn
+      given-names: Sebastian
+  title: "GENPACK: KPI-Guided Multi-Objective Genetic Algorithm for Industrial 3D Bin Packing"
+  journal: "arXiv preprint"
+  year: 2026
+  volume: "arXiv:2601.11325"
+  url: "https://arxiv.org/abs/2601.11325"
